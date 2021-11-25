@@ -1,5 +1,7 @@
 package com.example.design.policy;
 
+import java.util.concurrent.locks.ReentrantLock;
+
 /**
  * @author wangyihao
  * @ClassName Test
@@ -7,6 +9,8 @@ package com.example.design.policy;
  * @Description
  */
 public class Test {
+
+    ReentrantLock lock = new ReentrantLock();
 
     public static void main(String[] args) {
 

@@ -1,5 +1,7 @@
 package com.example.design.observer;
 
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -17,6 +19,8 @@ public class DSubject implements Subject {
 
     @Override
     public void registerObserver(Observer observer) {
+        AnnotationConfigApplicationContext configApplicationContext = new AnnotationConfigApplicationContext();
+        configApplicationContext.register();
 
         observers.add(observer);
     }

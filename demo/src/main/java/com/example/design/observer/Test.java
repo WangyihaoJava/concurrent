@@ -1,5 +1,7 @@
 package com.example.design.observer;
 
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+
 /**
  * @author wangyihao
  * @ClassName Test
@@ -10,6 +12,7 @@ public class Test {
 
     public static void main(String[] args) {
 
+        AnnotationConfigApplicationContext annotationConfigApplicationContext = new AnnotationConfigApplicationContext();
         DSubject dSubject = new DSubject();
 
         ObserverOne observerOne = new ObserverOne(dSubject);

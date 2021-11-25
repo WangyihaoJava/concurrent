@@ -12,6 +12,8 @@ import java.lang.reflect.Proxy;
  */
 public class DynamicInvoke implements InvocationHandler {
 
+
+
     private Object target;
 
     public DynamicInvoke(Object target) {
@@ -22,6 +24,7 @@ public class DynamicInvoke implements InvocationHandler {
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
         Object invoke = method.invoke(target, args);
         System.out.println("增强的方法");
+
 
         return invoke;
     }
