@@ -1,6 +1,16 @@
 package com.example.day1.basic_class_02;
 
 //找到字符串中最大回文长度
+
+/**
+ * 笨办法就是 对于奇数回文 从0开始往两边扩直到扩不动了 就是最大长度 但是这个办法对于偶回文是不行的
+ * 怎么办呢 两头和中间加上特殊字符 比如 133331  变成#1#3#3#3#3#1# 按照这个去扩 不管什么结果 最大结果除以2就是最终数
+ *
+ * manacher跟kmp一样也是在原有暴力基础上有加速的过程
+ *
+ * 回文半径最右边界 所有扩的过程中能够到达的最右的位置
+ *
+ */
 public class Code_04_Manacher {
 
 	public static char[] manacherString(String str) {
@@ -18,6 +28,7 @@ public class Code_04_Manacher {
 			return 0;
 		}
 		char[] charArr = manacherString(str);
+		//回文半径数组 记录每个字符的回文长度
 		int[] pArr = new int[charArr.length];
 		int index = -1;
 		int pR = -1;
