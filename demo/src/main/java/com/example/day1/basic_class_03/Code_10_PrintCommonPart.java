@@ -10,6 +10,7 @@ public class Code_10_PrintCommonPart {
 		}
 	}
 
+	//打印链表公共部分
 	public static void printCommonPart(Node head1, Node head2) {
 		System.out.print("Common Part: ");
 		//谁大谁往下走 相等打印

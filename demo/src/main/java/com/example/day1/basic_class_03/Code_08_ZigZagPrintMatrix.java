@@ -7,8 +7,10 @@ public class Code_08_ZigZagPrintMatrix {
 		int tC = 0;
 		int dR = 0;
 		int dC = 0;
+		//最后一行
 		int endR = matrix.length - 1;
 		int endC = matrix[0].length - 1;
+		//控制是从上往下 还是从下往上打印
 		boolean fromUp = false;
 		while (tR != endR + 1) {
 			printLevel(matrix, tR, tC, dR, dC, fromUp);

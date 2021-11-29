@@ -1,5 +1,5 @@
 package com.example.day1.basic_class_04;
-
+//局部最小
 public class Code_10_FindOneLessValueIndex {
 
 	public static int getLessIndex(int[] arr) {

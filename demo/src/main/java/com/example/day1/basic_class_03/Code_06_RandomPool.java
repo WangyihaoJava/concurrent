@@ -1,7 +1,7 @@
 package com.example.day1.basic_class_03;
 
 import java.util.HashMap;
-
+//设计一个获取随机值的工具
 public class Code_06_RandomPool {
 
 	public static class Pool<K> {

@@ -1,5 +1,6 @@
 package com.example.day1.basic_class_02;
 
+//找到字符串中最大回文长度
 public class Code_04_Manacher {
 
 	public static char[] manacherString(String str) {

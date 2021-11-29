@@ -2,6 +2,12 @@ package com.example.day1.basic_class_03;
 
 public class Code_09_FindNumInSortedMatrix {
 
+	/**
+	 * 从右上角开始找 如果k小于于当前这个行的数 当前行所在列一定没有 向左移动
+	 * @param matrix
+	 * @param K
+	 * @return
+	 */
 	public static boolean isContains(int[][] matrix, int K) {
 		int row = 0;
 		int col = matrix[0].length - 1;

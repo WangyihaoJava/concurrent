@@ -21,6 +21,8 @@ public class Code_12_SmallerEqualBigger {
 			i++;
 			cur = cur.next;
 		}
+		//在容器中进行partition的过程 就是快排的前半部分
+		//在容器中进行调整后重新组织链表
 		Node[] nodeArr = new Node[i];
 		i = 0;
 		cur = head;
@@ -57,6 +59,7 @@ public class Code_12_SmallerEqualBigger {
 		nodeArr[b] = tmp;
 	}
 
+	//上面的第一种空间复杂度0(n) 如果想要空间是0(1) 先找出 大 中 小 三个数然后分类 把对应数挂上去即可
 	public static Node listPartition2(Node head, int pivot) {
 		Node sH = null; // small head
 		Node sT = null; // small tail

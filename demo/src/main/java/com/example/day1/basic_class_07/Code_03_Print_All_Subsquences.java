@@ -39,6 +39,7 @@ public class Code_03_Print_All_Subsquences {
 	 */
 	public static void f(char[] chs, int index,String pre) {
 		//idex到最后打印之前形成的字符串
+		//为什么是等于length才打印 因为只有这样的情况下才会把所有的情况全部展开
 		if (index == chs.length){
 			if (!pre.equals("")){
 				System.out.println(pre);
@@ -46,8 +47,8 @@ public class Code_03_Print_All_Subsquences {
 			return;
 		}
 		//要么要 要么不要 把所有沿途的打印出来就是子序列
-		f(chs,index + 1,pre + String.valueOf(chs[index]));
 		f(chs,index + 1,pre);
+		f(chs,index + 1,pre + String.valueOf(chs[index]));
 	}
 
 	public static void main(String[] args) {

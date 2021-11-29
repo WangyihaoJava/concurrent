@@ -6,12 +6,12 @@ public class Code_08_Money_Problem {
 		return process1(arr, 0, 0, aim);
 	}
 
+	//改动态规划只需要 分析i 和 sum 就是 0 - （n - 1） sum 就是0 - arr中所有数累加和
 	public static boolean process1(int[] arr, int i, int sum, int aim) {
-		if (sum == aim) {
-			return true;
-		}
+
+		//为什么在最后一级才进行判断 因为只有在最后一层才得到所有穷举得出的值
 		if (i == arr.length) {
-			return false;
+			return sum == aim;
 		}
 		return process1(arr, i + 1, sum, aim) || process1(arr, i + 1, sum + arr[i], aim);
 	}
