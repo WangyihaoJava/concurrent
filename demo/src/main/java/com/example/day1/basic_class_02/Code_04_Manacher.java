@@ -10,6 +10,8 @@ package com.example.day1.basic_class_02;
  *
  * 回文半径最右边界 所有扩的过程中能够到达的最右的位置
  *
+ * 有三种情况
+ * 1、当i在最大回文串中 那么一定不可能再大了
  */
 public class Code_04_Manacher {
 
@@ -31,21 +33,31 @@ public class Code_04_Manacher {
 		//回文半径数组 记录每个字符的回文长度
 		int[] pArr = new int[charArr.length];
 		int index = -1;
+		//右边届
 		int pR = -1;
 		int max = Integer.MIN_VALUE;
 		for (int i = 0; i != charArr.length; i++) {
+			//获取字符的最大回文长度的加速过程就是右边届如果在已知回文串中 就可以进行加速 否则就取1
+			//2 * index - i 2倍代表最大回文右边界 减去当前字符的下标
+			//pR - i 最大回文右边届 减去 当前下标
 			pArr[i] = pR > i ? Math.min(pArr[2 * index - i], pR - i) : 1;
+			//每个字符往外扩
+			//i + pArr[i] < charArr.length 代表当前字符的回文右边界小于最右边
 			while (i + pArr[i] < charArr.length && i - pArr[i] > -1) {
+				//往外扩的过程 最开始我的左边和右边是否相等 依次累加左边和右边就是往外扩的过程 每次相等的话都进行加加
 				if (charArr[i + pArr[i]] == charArr[i - pArr[i]])
 					pArr[i]++;
 				else {
 					break;
 				}
 			}
+
+			//更新更大的回文右边界
 			if (i + pArr[i] > pR) {
 				pR = i + pArr[i];
 				index = i;
 			}
+			//比较当前长度和已知最大的回文长度
 			max = Math.max(max, pArr[i]);
 		}
 		return max - 1;
