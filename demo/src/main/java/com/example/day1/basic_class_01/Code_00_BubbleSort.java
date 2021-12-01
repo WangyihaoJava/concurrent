@@ -15,6 +15,19 @@ public class Code_00_BubbleSort {
 				}
 			}
 		}
+
+
+		/**
+		 *
+		 * 上面的和下面其实是一样的 只不过上面的每次都是把最大的放到右边 下面的放到左边
+		 * for (int e = 0; e < arr.length - 1; e++) {
+		 * 			for (int i = e; i < arr.length - 1; i++) {
+		 * 				if (arr[i] < arr[i + 1]) {
+		 * 					swap(arr, i, i + 1);
+		 *                                }*
+		 *                                }
+		 * 		}
+		 */
 	}
 
 	public static void swap(int[] arr, int i, int j) {
@@ -82,8 +95,8 @@ public class Code_00_BubbleSort {
 	// for test
 	public static void main(String[] args) {
 		int testTime = 500000;
-		int maxSize = 100;
-		int maxValue = 100;
+		int maxSize = 10;
+		int maxValue = 10;
 		boolean succeed = true;
 		for (int i = 0; i < testTime; i++) {
 			int[] arr1 = generateRandomArray(maxSize, maxValue);
