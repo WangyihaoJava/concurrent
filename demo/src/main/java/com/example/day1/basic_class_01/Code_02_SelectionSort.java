@@ -8,6 +8,9 @@ public class Code_02_SelectionSort {
 		if (arr == null || arr.length < 2) {
 			return;
 		}
+		/**
+		 * 选择排序就是每次循环选择一个最小的数进行交换
+		 */
 		for (int i = 0; i < arr.length - 1; i++) {
 			int minIndex = i;
 			for (int j = i + 1; j < arr.length; j++) {
