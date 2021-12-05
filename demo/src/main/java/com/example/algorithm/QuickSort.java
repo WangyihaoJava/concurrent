@@ -5,6 +5,7 @@ package com.example.algorithm;
  * @ClassName: QuickSort
  * @Description:
  * @date 2021/7/28 18:27
+ *
  */
 public class QuickSort {
     public void sort(int[] nums,int start,int end) {//612753
@@ -112,9 +113,9 @@ public class QuickSort {
 
     public static void main(String args[]) throws InterruptedException {
 
-        int a[] = {6,1,2,7,5,3,3};
+        int a[] = {6,1,2,7,5,3};
         QuickSort q = new QuickSort();
-        q.sort2(a,0,a.length-1);
+        q.sort(a,0,a.length-1);
         for(int i=0;i<a.length;i++){
             System.out.print(a[i]);
         }

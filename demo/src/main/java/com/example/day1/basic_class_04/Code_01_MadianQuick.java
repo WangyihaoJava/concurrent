@@ -8,6 +8,7 @@ public class Code_01_MadianQuick {
 
 	/**
 	 * 把数分两半 小的一半放大根堆 大的一半放小根堆 小根堆的堆顶就是中间那个数
+	 * 两个堆的堆顶一定能压中中位数 如果某一个的大小超过另一个2个 就把数量多的弹出一个到数量少的那个里面
 	 */
 	public static class MedianHolder {
 		private PriorityQueue<Integer> maxHeap = new PriorityQueue<Integer>(new MaxHeapComparator());

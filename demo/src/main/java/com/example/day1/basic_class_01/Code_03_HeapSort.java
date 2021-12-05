@@ -12,7 +12,10 @@ public class Code_03_HeapSort {
 			heapInsert(arr, i);
 		}
 		int size = arr.length;
+		//头结点和尾结点交换
 		swap(arr, 0, --size);
+
+		//如果没到0 我给你一个size你去调整成大根堆 size减1后 相当于整个结构减1 最后一个再也碰不到了 每次拿一个最大的数不动了 最后直到最后一个数 这样就从大到小排好序了(大根堆的情况 如果是小根堆就是从小到大排)
 		while (size > 0) {
 			heapify(arr, 0, size);
 			swap(arr, 0, --size);
@@ -40,17 +43,22 @@ public class Code_03_HeapSort {
 	 * @param size
 	 */
 	public static void heapify(int[] arr, int index, int size) {
-		int left = index * 2 + 1;
+		//当前的左孩子下标
+		int left = index * 2 + 1;//index * 2 + 2是当前右孩子
 		while (left < size) {
-			//我孩子中较大那个下标给我
+			//我孩子中较大那个下标给我(起码是左孩子 在不越届并且右孩子更大就是右孩子)
 			int largest = left + 1 < size && arr[left + 1] > arr[left] ? left + 1 : left;
+			//找出我和我最大孩子的那个下标
 			largest = arr[largest] > arr[index] ? largest : index;
+			//如果我的孩子没有比我大 循环停止
 			if (largest == index) {
 				break;
 			}
 
 			//某个孩子比我大 那个孩子的位置是largest 那个孩子和我换 然后继续循环
 			swap(arr, largest, index);
+
+			//把当前下标改为更大的那个 循环继续
 			index = largest;
 			left = index * 2 + 1;
 		}
