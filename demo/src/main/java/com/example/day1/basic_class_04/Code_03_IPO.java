@@ -32,6 +32,14 @@ public class Code_03_IPO {
 
 	}
 
+	/**
+	 *
+	 * @param k 最多做几个项目
+	 * @param W 初始资金
+	 * @param Profits
+	 * @param Capital
+	 * @return
+	 */
 	public static int findMaximizedCapital(int k, int W, int[] Profits, int[] Capital) {
 		Node[] nodes = new Node[Profits.length];
 		//初始化node节点 将两个数组封装到一个node数组里面
