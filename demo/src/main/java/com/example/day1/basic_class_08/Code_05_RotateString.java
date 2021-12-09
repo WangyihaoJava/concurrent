@@ -33,6 +33,7 @@ public class Code_05_RotateString {
 		}
 	}
 
+	//左边逆序 右边逆序 整体逆序就是答案
 	public static void rotate1(char[] chas, int size) {
 		if (chas == null || size <= 0 || size >= chas.length) {
 			return;
