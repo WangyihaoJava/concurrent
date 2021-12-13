@@ -42,7 +42,7 @@ public class Code_05_PreInPosTraversal {
 	}
 
 	/**
-	 * 中左右
+	 * 前序遍历 中左右
 	 * @param head
 	 */
 	public static void preOrderUnRecur(Node head) {
@@ -66,7 +66,7 @@ public class Code_05_PreInPosTraversal {
 	}
 
 	/**
-	 * 左中右
+	 *中序遍历 左中右
 	 * @param head
 	 */
 	public static void inOrderUnRecur(Node head) {
@@ -88,7 +88,7 @@ public class Code_05_PreInPosTraversal {
 	}
 
 	/**
-	 * 左右中
+	 *后序遍历 左右中
 	 * @param head
 	 */
 	public static void posOrderUnRecur1(Node head) {
