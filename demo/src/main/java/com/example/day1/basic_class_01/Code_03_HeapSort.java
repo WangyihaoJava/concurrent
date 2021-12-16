@@ -23,7 +23,7 @@ public class Code_03_HeapSort {
 	}
 
 	/**
-	 * 某个位置往上走
+	 * 某个位置往上走 (保证任意一个父节点是最大 但是不保证子节点大小次序)
 	 * @param arr
 	 * @param index
 	 */
@@ -37,7 +37,7 @@ public class Code_03_HeapSort {
 	}
 
 	/**
-	 * 某个位置往下走
+	 * 某个位置往下走 (调整子节点的次序)
 	 * @param arr
 	 * @param index
 	 * @param size
