@@ -1,7 +1,6 @@
 package com.example.day1.basic_class_05;
 
-import java.util.HashSet;
-import java.util.Stack;
+import java.util.*;
 
 /**
  * 深度优先遍历
@@ -32,10 +31,10 @@ public class Code_03_DFS {
 					set.add(next);
 					//下一级的放进来就打印
 					System.out.println(next.value);
+					//深度搜索只遍历一个也就是最左边那个就停止
 					break;
 				}
 			}
 		}
 	}
-
 }
