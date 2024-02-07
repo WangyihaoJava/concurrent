@@ -75,6 +75,12 @@ public class Code_14_FindFirstIntersectNode {
 		return n1;
 	}
 
+	/**
+	 * 无环链表相交问题
+	 * @param head1
+	 * @param head2
+	 * @return
+	 */
 	public static Node noLoop(Node head1, Node head2) {
 		if (head1 == null || head2 == null) {
 			return null;
