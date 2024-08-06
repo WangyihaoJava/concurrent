@@ -3,8 +3,6 @@ package com.example.demo;
 import org.openjdk.jol.info.ClassLayout;
 
 import java.io.FileInputStream;
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
 /**
  * @author wangyihao
  * @ClassName MyClassLoaderTest
@@ -47,7 +45,7 @@ public class MyClassLoaderTest {
         /**
          * 32 * 重写类加载方法，实现自己的加载逻辑，不委派给双亲加载 33 * @param name 34 * @param resolve 35 * @return 36 * @throws ClassNotFoundException 37
          */
-        @Override
+       /* @Override
         protected Class<?> loadClass(String name, boolean resolve) throws ClassNotFoundException {
             synchronized (getClassLoadingLock(name)) {
                 // First, check if the class has already been loaded
@@ -65,7 +63,7 @@ public class MyClassLoaderTest {
                 }
                 return c;
             }
-        }
+        }*/
     }
 
     public static void main(String args[]) {
