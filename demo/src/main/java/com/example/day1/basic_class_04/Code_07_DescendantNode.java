@@ -21,6 +21,12 @@ public class Code_07_DescendantNode {
 		}
 	}
 
+	/**
+	 * 中序遍历的后继节点
+	 * 1、如果某个节点有右子树 那么它的后继节点就是 这个右子树的最左节点
+	 * 2、没有右子树 (1)它的父节点就是它的后继节点 (2)它的父亲节点作为'某个'节点的左子树时这个'某个'节点就是它的后继节点  也就是它的某个祖先节点
+	 * @param
+	 */
 	public static Node getNextNode(Node node) {
 		if (node == null) {
 			return node;
@@ -29,7 +35,7 @@ public class Code_07_DescendantNode {
 			return getLeftMost(node.right);
 		} else {
 			Node parent = node.parent;
-			//一直往上找 判断node是不是parent左子树  如果是 停 返回这个parent
+			//一直往上找 判断node是不是parent左子树  如果是 停 返回这个parent  这个的方式
 			while (parent != null && parent.left != node) {
 				node = parent;
 				parent = node.parent;

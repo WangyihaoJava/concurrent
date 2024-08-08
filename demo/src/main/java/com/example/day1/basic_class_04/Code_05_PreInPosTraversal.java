@@ -78,6 +78,7 @@ public class Code_05_PreInPosTraversal {
 					stack.push(head);
 					head = head.left;
 				} else {
+					//弹出最左之后 就赋值给当前循环中的 往上窜
 					head = stack.pop();
 					System.out.print(head.value + " ");
 					head = head.right;
